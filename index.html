@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trombone Trolley - Wild Western VR Musical Adventure</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dust-trail" id="dustTrail"></div>
+    
+    <header>
+        <div class="header-content">
+            <h1 class="title">Trombone Trolley</h1>
+            <p class="subtitle">Toot Your Way Through the Wild West</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About</h2>
+                <p>
+                    Saddle up for a musical journey through the Wild West! Trombone Trolley is an innovative VR 
+                    experience where you hold a physical trombone prop and match the pitch of classic western tunes 
+                    to power your desert cart down the railroad tracks. The better you play, the faster you go! 
+                    Inspired by the rhythm game Trombone Champ, this immersive VR adventure combines hand tracking, 
+                    physical props, and musical gameplay to create an unforgettable experience. Can you hit the 
+                    right notes and reach the end of the line before the song runs out?
+                </p>
+            </div>
+        </section>
+
+        <section id="how-to-play" class="section alt-bg">
+            <div class="container">
+                <h2>How to Play</h2>
+                
+                <div class="guide-item">
+                    <div class="guide-image">
+                        <div class="placeholder-image">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="200" height="150" fill="#D4A574"/>
+                                <!-- VR Headset icon -->
+                                <g opacity="0.3" fill="white">
+                                    <rect x="60" y="60" width="80" height="40" rx="8"/>
+                                    <circle cx="80" cy="80" r="12"/>
+                                    <circle cx="120" cy="80" r="12"/>
+                                </g>
+                                <ellipse cx="100" cy="75" rx="35" ry="25" fill="none" stroke="white" stroke-width="3"/>
+                                <text x="100" y="130" text-anchor="middle" fill="white" font-size="16">Put on VR Headset</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="guide-content">
+                        <h3>Getting Started</h3>
+                        <p>
+                            Put on your VR headset and grab the physical trombone prop. The game uses advanced hand 
+                            tracking to detect your grip and movements, making the virtual trombone feel like a real 
+                            instrument. Once you're holding the trombone, you'll find yourself on a cart in the middle 
+                            of a vast desert landscape, ready to begin your musical journey.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="guide-item reverse">
+                    <div class="guide-image">
+                        <div class="placeholder-image">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="200" height="150" fill="#C19A6B"/>
+                                <!-- Trombone shape -->
+                                <path d="M 40 70 L 100 70 L 100 65 L 130 65 Q 145 65, 145 75 Q 145 85, 130 85 L 100 85 L 100 80 L 40 80 Z" 
+                                      fill="white" opacity="0.4"/>
+                                <!-- Musical notes -->
+                                <circle cx="121" cy="50" r="5" fill="white"/>
+                                <line x1="125" y1="50" x2="125" y2="35" stroke="white" stroke-width="2"/>
+                                <circle cx="141" cy="45" r="5" fill="white"/>
+                                <line x1="145" y1="45" x2="145" y2="30" stroke="white" stroke-width="2"/>
+                                <text x="100" y="130" text-anchor="middle" fill="white" font-size="16">Match the Pitch</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="guide-content">
+                        <h3>Playing Your Tune</h3>
+                        <p>
+                            Listen carefully to the western melody playing and move the trombone slide to the correct 
+                            position, then blow into the physical trombone to play the note! The audio detection system 
+                            evaluates your timing and performance. Visual indicators with beautiful rim-lit shaders help 
+                            guide you to the correct slide position. The more accurately you hit the notes at the right 
+                            time, the faster your cart accelerates down the tracks. Perfect timing will have you zooming 
+                            through the canyon!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="guide-item">
+                    <div class="guide-image">
+                        <div class="placeholder-image">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="200" height="150" fill="#B8860B"/>
+                                <!-- Railroad tracks -->
+                                <line x1="40" y1="90" x2="160" y2="90" stroke="white" stroke-width="2"/>
+                                <line x1="40" y1="100" x2="160" y2="100" stroke="white" stroke-width="2"/>
+                                <line x1="60" y1="88" x2="60" y2="102" stroke="white" stroke-width="1.5"/>
+                                <line x1="90" y1="88" x2="90" y2="102" stroke="white" stroke-width="1.5"/>
+                                <line x1="120" y1="88" x2="120" y2="102" stroke="white" stroke-width="1.5"/>
+                                <line x1="150" y1="88" x2="150" y2="102" stroke="white" stroke-width="1.5"/>
+                                <!-- Speed lines -->
+                                <line x1="20" y1="70" x2="50" y2="70" stroke="white" stroke-width="2" opacity="0.4"/>
+                                <line x1="25" y1="60" x2="60" y2="60" stroke="white" stroke-width="2" opacity="0.4"/>
+                                <text x="100" y="130" text-anchor="middle" fill="white" font-size="16">Race Down the Rails</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="guide-content">
+                        <h3>Reaching Your Destination</h3>
+                        <p>
+                            Your goal is to travel as far down the railroad tracks as possible before the song ends. 
+                            Each note you hit perfectly adds momentum to your cart, while missed notes slow you down. 
+                            Watch the stunning desert scenery blur past as you master the melody. How far can you make 
+                            it before the final note?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="technology" class="section">
+            <div class="container">
+                <h2>Technology</h2>
+                
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="url(#grad1)" opacity="0.3"/>
+                                <!-- Hand outline -->
+                                <path d="M 35 60 L 35 45 L 40 40 L 40 50 M 40 40 L 45 35 L 45 50 M 45 35 L 50 30 L 50 55 M 50 30 L 55 35 L 55 50 M 55 35 L 60 40 L 60 50 L 60 65 Q 60 70, 55 70 L 40 70 Q 35 70, 35 65 Z" 
+                                      fill="url(#grad1)" stroke="url(#grad1)" stroke-width="1"/>
+                                <defs>
+                                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#D4A574;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h3>Hand Tracking & Physical Trombone Integration</h3>
+                        <p>
+                            One of the biggest innovations was creating a rich physical trombone interaction system. 
+                            We customized Unity's built-in hand tracking to accurately detect hand position and grip on 
+                            the physical prop, mapping it to the virtual trombone in real-time. Players don't just move 
+                            the slide—they actually blow into the trombone to produce sound, which our audio detection 
+                            system analyzes for pitch accuracy. This dual-input system (sliding + blowing) creates an 
+                            authentic trombone playing experience that feels natural and immersive.
+                        </p>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="url(#grad2)" opacity="0.3"/>
+                                <!-- Audio waveform -->
+                                <path d="M 20 50 L 25 40 L 30 60 L 35 30 L 40 70 L 45 35 L 50 65 L 55 40 L 60 60 L 65 45 L 70 55 L 75 50 L 80 50" 
+                                      fill="none" stroke="url(#grad2)" stroke-width="3"/>
+                                <defs>
+                                    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#D4A574;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h3>Audio Detection & Beat Mapping</h3>
+                        <p>
+                            The core gameplay mechanic relies on audio detection to evaluate player performance. When players 
+                            blow into the trombone at the right moment with the slide in the correct position, the audio system 
+                            detects their input and evaluates it against the beat map. The beat map system synchronizes the 
+                            musical challenges with the cart's movement along the tracks, creating a rhythm-based progression 
+                            system. This tight integration between audio input, slide positioning, visual feedback, and gameplay 
+                            rewards allows players to feel the satisfaction of hitting the right notes and adjusting their 
+                            technique on the fly.
+                        </p>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="url(#grad3)" opacity="0.3"/>
+                                <!-- Shader/light rays icon -->
+                                <circle cx="50" cy="50" r="15" fill="url(#grad3)"/>
+                                <line x1="50" y1="20" x2="50" y2="35" stroke="url(#grad3)" stroke-width="3"/>
+                                <line x1="50" y1="65" x2="50" y2="80" stroke="url(#grad3)" stroke-width="3"/>
+                                <line x1="20" y1="50" x2="35" y2="50" stroke="url(#grad3)" stroke-width="3"/>
+                                <line x1="65" y1="50" x2="80" y2="50" stroke="url(#grad3)" stroke-width="3"/>
+                                <line x1="30" y1="30" x2="40" y2="40" stroke="url(#grad3)" stroke-width="3"/>
+                                <line x1="60" y1="60" x2="70" y2="70" stroke="url(#grad3)" stroke-width="3"/>
+                                <line x1="70" y1="30" x2="60" y2="40" stroke="url(#grad3)" stroke-width="3"/>
+                                <line x1="40" y1="60" x2="30" y2="70" stroke="url(#grad3)" stroke-width="3"/>
+                                <defs>
+                                    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#D4A574;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h3>Advanced Shading & Procedural Generation</h3>
+                        <p>
+                            A major innovation in our project was the custom shader work, particularly the note visualization 
+                            system with beautiful rim lighting effects that guide players to the correct pitch positions. 
+                            The shaders create an eye-catching visual language that makes the musical gameplay intuitive and 
+                            satisfying. Additionally, we implemented procedural generation for the desert environment, creating 
+                            varied and expansive landscapes that generate dynamically as the cart travels down the rails, 
+                            ensuring each journey feels fresh while maintaining optimal performance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="development" class="section alt-bg">
+            <div class="container">
+                <h2>Development Journey</h2>
+                
+                <div class="journey-content">
+                    <div class="journey-section">
+                        <h3>Challenges & Solutions</h3>
+                        <p>
+                            Creating a convincing physical trombone interaction proved to be one of our most significant 
+                            challenges. We needed to combine sliding motion tracking with breath detection for an authentic 
+                            playing experience. VR hand tracking systems are optimized for bare hands, so integrating a 
+                            physical prop required careful customization of Unity's hand tracking to work reliably with our 
+                            trombone design.
+                        </p>
+                        <p>
+                            <strong>Our Solution:</strong> We customized Unity's built-in hand tracking system specifically 
+                            for our use case, creating a robust interaction model that accurately captures both the slide 
+                            position and the player's blowing action. The audio detection system recognizes when players blow 
+                            at the right moments, while our custom shaders provide clear visual feedback through rim-lit note 
+                            indicators. This combination creates a rich, responsive instrument that feels authentic in the 
+                            player's hands.
+                        </p>
+                        <p>
+                            Another challenge was maintaining visual clarity and performance while the procedurally generated 
+                            desert environment streamed in around the moving cart. Our shader optimizations and smart generation 
+                            systems ensured smooth performance even with the complex rim lighting effects on the musical notes.
+                        </p>
+                    </div>
+
+                    <div class="journey-section">
+                        <h3>Inspiration & Related Work</h3>
+                        <p>
+                            Trombone Trolley draws heavy inspiration from <em>Trombone Champ</em>, the viral rhythm game that 
+                            brought trombone gameplay to mainstream audiences with its hilarious and challenging mechanics. We 
+                            loved the core concept but wanted to explore how it could translate to VR with physical props and 
+                            immersive environments. Games like <em>Beat Saber</em> and <em>Pistol Whip</em> demonstrated how 
+                            rhythm-based VR experiences can be incredibly engaging, while titles like <em>Red Dead Redemption</em> 
+                            influenced our visual direction for the wild western aesthetic.
+                        </p>
+                        <p>
+                            We also looked at real-world examples of musical instruments in VR, such as <em>SoundStage VR</em> 
+                            and various virtual music creation tools. These experiences showed us the potential for expressive 
+                            musical interaction in virtual space, but we wanted to focus on accessibility and immediate fun 
+                            rather than simulation complexity.
+                        </p>
+                    </div>
+
+                    <div class="journey-section">
+                        <h3>Lessons Learned</h3>
+                        <p>
+                            <strong>Physical Props + Breath Input = Maximum Immersion:</strong> The combination of holding 
+                            a physical trombone and actually blowing into it significantly increased player immersion. The 
+                            dual-input system made the experience feel remarkably authentic compared to controller-only 
+                            prototypes.
+                        </p>
+                        <p>
+                            <strong>Visual Feedback Through Shaders Is Crucial:</strong> Our custom rim-lit shaders for the 
+                            note indicators weren't just aesthetically pleasing—they became essential for gameplay clarity. 
+                            The visual language helped players understand pitch targets instantly.
+                        </p>
+                        <p>
+                            <strong>Audio Detection Needs Careful Tuning:</strong> Detecting breath-based audio input required 
+                            extensive calibration to work reliably across different players and blowing intensities. The beat 
+                            map system needed to be forgiving enough for newcomers while still rewarding accurate timing.
+                        </p>
+                        <p>
+                            <strong>Procedural Generation Enables Scalability:</strong> Generating the desert environment 
+                            procedurally allowed us to create seemingly endless tracks without manual content creation, while 
+                            maintaining visual variety and performance.
+                        </p>
+                        <p>
+                            <strong>Unity's Hand Tracking is Customizable:</strong> While Unity's built-in hand tracking worked 
+                            well out of the box, customizing it for our specific trombone interaction unlocked much more reliable 
+                            and natural-feeling controls.
+                        </p>
+                        <p>
+                            <strong>Playtesting Revealed Unexpected Joy:</strong> Even players who struggled with pitch matching 
+                            enjoyed the experience, often laughing at their attempts and trying to improve. The game's forgiving 
+                            nature made it accessible to non-musicians while still rewarding skilled play.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item" style="animation-delay: 0.1s">
+                        <img src="images/gallery/agi-p2-gallery1.jpg" alt="Trombone Trolley gameplay 1">
+                    </div>
+                    <div class="gallery-item" style="animation-delay: 0.2s">
+                        <img src="images/gallery/agi-p2-gallery2.jpg" alt="Trombone Trolley gameplay 2">
+                    </div>
+                    <div class="gallery-item" style="animation-delay: 0.3s">
+                        <img src="images/gallery/agi-p2-gallery3.jpg" alt="Trombone Trolley gameplay 3">
+                    </div>
+                    <div class="gallery-item" style="animation-delay: 0.4s">
+                        <img src="images/gallery/agi-p2-gallery4.jpg" alt="Trombone Trolley gameplay 4">
+                    </div>
+                    <div class="gallery-item" style="animation-delay: 0.5s">
+                        <img src="images/gallery/agi-p2-gallery5.jpg" alt="Trombone Trolley gameplay 5">
+                    </div>
+                    <div class="gallery-item" style="animation-delay: 0.6s">
+                        <img src="images/gallery/agi-p2-gallery6.jpg" alt="Trombone Trolley gameplay 6">
+                    </div>
+                    <div class="gallery-item" style="animation-delay: 0.7s">
+                        <img src="images/gallery/agi-p2-gallery7.jpg" alt="Trombone Trolley gameplay 7">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="section alt-bg">
+            <div class="container">
+                <h2>The Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <img src="images/alexanderkazakov.jpg" alt="Alexander Kazakov">
+                        </div>
+                        <h3>Alexander Kazakov</h3>
+                        <div class="member-tags">
+                            <span class="tag">3D Design</span>
+                            <span class="tag">Gameplay Programming</span>
+                            <span class="tag">Hand Interaction Programming</span>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <img src="images/andreasgarcia.jpg" alt="Andreas Garcia">
+                        </div>
+                        <h3>Andreas Garcia</h3>
+                        <div class="member-tags">
+                            <span class="tag">UI Design</span>
+                            <span class="tag">Shading</span>
+                            <span class="tag">Website Development</span>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <img src="images/jakobfäldtpettersson.jpg" alt="Jakob Fäldt Pettersson">
+                        </div>
+                        <h3>Jakob Fäldt Pettersson</h3>
+                        <div class="member-tags">
+                            <span class="tag">Audio Detection</span>
+                            <span class="tag">Audio Interaction Programming</span>
+                            <span class="tag">Gameplay Programming</span>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <img src="images/matildajansson.jpg" alt="Matilda Jansson">
+                        </div>
+                        <h3>Matilda Jansson</h3>
+                        <div class="member-tags">
+                            <span class="tag">Shading</span>
+                            <span class="tag">Procedural Generation</span>
+                            <span class="tag">Environment Programming</span>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <img src="images/williamkoivula.jpg" alt="William Koivula">
+                        </div>
+                        <h3>William Koivula</h3>
+                        <div class="member-tags">
+                            <span class="tag">Beat Map System</span>
+                            <span class="tag">UI Design</span>
+                            <span class="tag">Gameplay Programming</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="github" class="section">
+            <div class="container">
+                <h2>Github Repository</h2>
+                <div class="github-card">
+                    <h3>trombone-trolley</h3>
+                    <p>VR musical adventure game with hand tracking and physical trombone prop integration</p>
+                    <a href="https://github.com/ShibireX/agi-website-p2" target="_blank" rel="noopener noreferrer" class="btn-primary">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
